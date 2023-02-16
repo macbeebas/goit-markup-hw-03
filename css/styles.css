@@ -9,6 +9,9 @@
   --gray-tint: #eee;
   --background: #e5e5e5;
   --background-black: #2f303a;
+  /* px variables */
+  --header-height: 80px;
+  --container-width: 1200px;
 }
 
 body,
@@ -25,11 +28,11 @@ body ul {
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  width: var(--container-width);
 }
 
 .header {
-  height: 80px;
+  height: var(--header-height);
   margin: auto;
   border: 1px solid var(--black);
   border-bottom: 1px solid var(--background);
@@ -45,7 +48,7 @@ body ul {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  height: 80px;
+  height: var(--header-height);
 }
 
 .main {
@@ -373,7 +376,7 @@ body ul {
 .portfolio-projects-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: calc((1200px - 3 * 370px) / 2);
+  gap: calc((var(--container-width) - 3 * 370px) / 2);
 }
 
 .portfolio-projects li {
