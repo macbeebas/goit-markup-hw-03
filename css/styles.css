@@ -30,7 +30,6 @@ body ul {
 
 .header {
   height: 80px;
-  width: 1600px;
   margin: auto;
   border: 1px solid var(--black);
   border-bottom: 1px solid var(--background);
@@ -43,12 +42,13 @@ body ul {
 
 .header-flex {
   display: flex;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
   height: 80px;
 }
 
 .main {
-  width: 1600px;
   margin: auto;
 }
 
@@ -103,17 +103,19 @@ body ul {
 .main-header-flex {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .what-we-do ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 50px;
 }
 
 .what-we-do img {
-  margin: 0 15px 0;
+  margin: auto auto 0px;
 }
 
 .team-content {
@@ -122,13 +124,11 @@ body ul {
   line-height: 1.19;
   letter-spacing: 0.03em;
   background-color: var(--gray-light);
-  display: flex;
-  flex-direction: column;
 }
 
 .team-content ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 50px;
   padding: 0;
   background-color: var(--gray-light);
@@ -143,11 +143,8 @@ body ul {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  margin: 0 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 270px;
   height: 368px;
 }
@@ -270,7 +267,6 @@ body ul {
 .footee {
   background-color: var(--background-black);
   height: 252px;
-  width: 1600px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -313,6 +309,7 @@ body ul {
 }
 
 .our-strengths {
+  /* Na razie puste ale może się przydać */
 }
 
 .our-strengths ul {
@@ -320,21 +317,21 @@ body ul {
   line-height: 1.14;
   text-transform: uppercase;
   display: flex;
-  justify-content: center;
+  gap: 15px;
 }
 
 .our-strengths h3 {
-  margin-top: 0;
+  margin: auto auto 5px;
 }
 
 .our-strengths p {
   line-height: 1.71;
   color: var(--gray);
   text-transform: none;
+  margin: 10px auto auto;
 }
 
 .portfolio {
-  width: 1600px;
   margin: auto;
 }
 
@@ -357,11 +354,12 @@ body ul {
 }
 
 .portfolio-filters {
-  display: flex;
+  /* zostaje, bo może się przydać */
 }
 
 .portfolio-filters ul {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
 }
 
 .portfolio-filters li {
@@ -369,16 +367,13 @@ body ul {
 }
 
 .portfolio-projects {
-  display: flex;
   margin-top: 50px;
 }
 
 .portfolio-projects-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
+  gap: calc((1200px - 3 * 370px) / 2);
 }
 
 .portfolio-projects li {
@@ -388,11 +383,8 @@ body ul {
   height: 404px;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: flex-start;
   padding: 0;
   margin: 0;
-  flex-basis: calc((100% - 2 * 100px) / 3);
 }
 
 .portfolio-projects h3 {
